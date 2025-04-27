@@ -1,0 +1,31 @@
+.header {
+  font-family: "Knewave", system-ui;
+  /* font-weight: 100; */
+  font-style: normal;
+  font-size: 44px;
+}
+.content {
+  font-family: "Playwrite IT Moderna", cursive;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+.carousel{
+    border: 1px solid;
+    width: 70vw;
+    display: grid;
+    grid-template-columns:repeat(5,1fr);
+    align-items: center;
+    overflow: auto;
+    object-fit: cover;
+}
+img {
+    max-height: 200px;
+    border-radius: 2rem;
+    transition: 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
