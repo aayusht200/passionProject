@@ -1,6 +1,8 @@
 :root {
   --background-color: beige;
+  --gap: 2rem;
 }
+
 body {
   background-color: var(--background-color);
   display: grid;
@@ -19,14 +21,18 @@ body {
   font-style: normal;
   font-size: 44px;
   border-bottom: 1px solid;
-  margin-bottom: 0;
-  padding: 0;
 }
 .content {
   font-family: "Playwrite IT Moderna", cursive;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+.content > div {
+  border-bottom: 0.1px solid gray;
 }
 .carousel {
   /* border:  1px solid; */
