@@ -1,5 +1,6 @@
 :root {
-  --background-color: beige;
+  --background-color: #fbfbef;
+  --fore-ground: #f9f9ef;
   --gap: 2rem;
 }
 body {
@@ -12,6 +13,7 @@ body {
   font-style: normal;
   font-size: 44px;
   border-bottom: 1px solid;
+  text-align: center;
 }
 .content {
   font-family: "Playwrite IT Moderna", cursive;
@@ -24,16 +26,15 @@ body {
   border-bottom: 0.1px solid gray;
   margin-bottom: var(--gap);
 }
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   body {
     display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 20vw;
+    margin-left: 5rem;
+    min-height: 200svh;
   }
   .section {
-    grid-column: 2;
-    min-width: 80vw;
-    justify-items: center;
+    text-align: justify;
   }
   .carousel {
     display: grid;
@@ -75,22 +76,44 @@ body {
     justify-self: end;
     z-index: -1;
   }
-  .index {
-    grid-column: 3;
-    display: flex;
-    flex-flow: column;
-    gap: 0;
+  .nav {
+    position: sticky;
+    top: 0;
+    max-height: 100svh;
+    margin-top: 1rem;
+  }
+
+  ul {
     margin: 0;
     padding: 0;
-  }
-  ul {
+    gap: var(--gap);
+    display: grid;
     list-style: none;
+    margin-left: 1rem;
+    /* border: 1px solid; */
   }
-  a {
+  .nav-list li {
+    background-color: var(--fore-ground);
+    border-radius: 1rem 0;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+    box-shadow: rgba(162, 161, 161, 0.5);
+    /* border: 1px solid; */
+    padding: 10px;
+  }
+  .nav-list a {
     text-decoration: none;
+    font-family: "Playwrite IT Moderna", cursive;
+    margin: 10px;
+    font-size: 1rem;
+    color: black;
+    -webkit-tap-highlight-color: transparent;
   }
 }
 @media (max-width: 1025px) {
+  .nav {
+    display: none;
+  }
   .carousel {
     display: flex;
     overflow: auto;
